@@ -48,7 +48,7 @@ const Layout = ({ children }) => {
         {isMenuOpen && (
           <div className="md:hidden border-t border-slate-100 bg-white p-4 space-y-3 shadow-lg absolute w-full left-0">
             <Link to="/analyze" className="block w-full">
-              <Button className="w-full bg-slate-900">Try Prototype</Button>
+              <Button className="w-full bg-slate-900 text-slate-500">Try Prototype</Button>
             </Link>
           </div>
         )}

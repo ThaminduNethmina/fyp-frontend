@@ -31,15 +31,18 @@ const Landing = () => {
             AlgoX overcomes the limitations of LLMs by combining <strong>CodeBERT</strong> embeddings with <strong>Static Analysis</strong> to accurately predict and explain Big-O complexity.
           </p>
 
-          <div className="flex justify-center gap-4">
+          {/* CTA Buttons - flex column in mobile but inline in larger screens */}
+          <div className="flex flex-col md:flex-row justify-center gap-4">
             <Link to="/analyze">
               <Button size="lg" className="h-12 px-8 bg-blue-600 hover:bg-blue-700 text-white rounded-full">
                 Run Analysis <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
+            <Link to="/">
             <Button variant="outline" size="lg" className="h-12 px-8 rounded-full border-slate-300 text-slate-700 hover:bg-slate-50">
               Read the Abstract
             </Button>
+            </Link>        
           </div>
         </div>
 
