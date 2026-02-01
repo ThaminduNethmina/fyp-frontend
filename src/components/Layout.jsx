@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-4">
             <a 
-              href="https://github.com" 
+              href="https://github.com/ThaminduNethmina/fyp-frontend" 
               target="_blank" 
               rel="noreferrer"
               className="text-slate-500 hover:text-slate-900 transition-colors"
@@ -62,7 +62,7 @@ const Layout = ({ children }) => {
       {/* --- FOOTER --- */}
       <footer className="border-t border-slate-200 py-8 bg-white text-center mt-auto">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
-          <p>© 2026 AlgoX Research. Final Year Project.</p>
+          <p>© 2026 AlgoX Research.</p>
           <div className="flex gap-6">
             <span className="cursor-pointer hover:text-slate-900">Research Paper</span>
             <span className="cursor-pointer hover:text-slate-900">Documentation</span>
