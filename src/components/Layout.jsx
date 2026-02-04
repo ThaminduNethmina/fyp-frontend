@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 font-sans text-slate-900">
       
-      {/* --- NAVBAR --- */}
+      {/* NAVBAR */}
       <nav className="border-b border-slate-200 bg-white/80 backdrop-blur-md sticky top-0 z-50">
         <div className="container mx-auto px-4 h-16 flex justify-between items-center">
           
@@ -54,12 +54,12 @@ const Layout = ({ children }) => {
         )}
       </nav>
 
-      {/* --- MAIN CONTENT (FIXED: Added w-full) --- */}
+      {/* MAIN CONTENT*/}
       <main className="flex-grow flex flex-col w-full">
         {children}
       </main>
 
-      {/* --- FOOTER --- */}
+      {/* FOOTER */}
       <footer className="border-t border-slate-200 py-8 bg-white text-center mt-auto">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
           <p>© 2026 AlgoX Research.</p>

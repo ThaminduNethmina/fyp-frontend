@@ -8,7 +8,6 @@ const ShapHighlighter = ({ tokens }) => {
         const score = item.score;
         let style = {};
         
-        // Dynamic Red/Blue coloring
         if (score > 0) {
           const alpha = Math.min(score * 50, 0.9); 
           style = { backgroundColor: `rgba(220, 38, 38, ${alpha})`, color: 'white' };
@@ -18,7 +17,7 @@ const ShapHighlighter = ({ tokens }) => {
         }
 
         // Clean up CodeBERT special characters
-        // 'Ġ' represents a space, 'Ċ' represents a newline (if present in your tokenizer)
+        // 'Ġ' is a space, 'Ċ' is a newline
         let tokenText = item.token.replace(/Ġ/g, ' ').replace(/Ċ/g, '\n');
 
         return (

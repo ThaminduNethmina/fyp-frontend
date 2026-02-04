@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 const Landing = () => {
   return (
     <Layout>
-      {/* 1. HERO SECTION: Clean, Centered, Academic */}
+      {/* HERO SECTION */}
       <section className="relative pt-24 pb-32 overflow-hidden">
         <div className="container mx-auto px-4 text-center relative z-10">
           
@@ -31,7 +31,6 @@ const Landing = () => {
             AlgoX overcomes the limitations of LLMs by combining <strong>CodeBERT</strong> embeddings with <strong>Static Analysis</strong> to accurately predict and explain Big-O complexity.
           </p>
 
-          {/* CTA Buttons - flex column in mobile but inline in larger screens */}
           <div className="flex flex-col md:flex-row justify-center gap-4">
             <Link to="/analyze">
               <Button size="lg" className="h-12 px-8 bg-blue-600 hover:bg-blue-700 text-white rounded-full">
@@ -46,11 +45,10 @@ const Landing = () => {
           </div>
         </div>
 
-        {/* Background Subtle Gradient */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-blue-100/50 rounded-full blur-3xl -z-10 opacity-60 pointer-events-none" />
       </section>
 
-      {/* 2. TECHNICAL PILLARS: Minimal Grid */}
+      {/* TECHNICAL PILLARS */}
       <section className="py-20 bg-white border-y border-slate-100">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-10">
@@ -77,7 +75,6 @@ const Landing = () => {
         </div>
       </section>
 
-      {/* 3. FINAL CALL: Simple Statement */}
       <section className="py-24 text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">

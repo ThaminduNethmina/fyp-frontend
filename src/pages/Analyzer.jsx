@@ -9,13 +9,13 @@ import ShapHighlighter from '../components/ShapHighlighter';
 import { motion, AnimatePresence } from 'framer-motion';
 import Editor from "@monaco-editor/react";
 
-// --- CONSTANTS ---
+// CONSTANTS
 const PLACEHOLDERS = {
   java: "// Enter your Java code here...",
   python: "# Enter your Python code here..."
 };
 
-// --- UTILITY: STRIP COMMENTS ---
+// UTILITY: STRIP COMMENTS
 const stripComments = (code, lang) => {
   if (!code) return "";
   
@@ -29,7 +29,7 @@ const stripComments = (code, lang) => {
   return code;
 };
 
-// --- STRICT VALIDATOR ---
+// STRICT VALIDATOR
 const validateInput = (code, selectedLang) => {
   // Ignore empty or placeholder code
   if (!code || code.trim().length < 10 || Object.values(PLACEHOLDERS).includes(code.trim())) return null;
@@ -71,12 +71,11 @@ const Analyzer = () => {
   
   const editorRef = useRef(null);
   const monacoRef = useRef(null);
-  const resultsRef = useRef(null); // Reference for auto-scroll
+  const resultsRef = useRef(null);
 
-  // --- AUTO-SCROLL EFFECT ---
+  // AUTO-SCROLL EFFECT
   useEffect(() => {
     if (result && resultsRef.current) {
-      // Small timeout to ensure DOM renders before scrolling
       setTimeout(() => {
         resultsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 100);
@@ -133,11 +132,12 @@ const Analyzer = () => {
     setResult(null);
     setShowExplanation(false);
 
+    // API CALL
     try {
       const response = await fetch('https://himansha2001-algox-backend.hf.space/predict', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ code: cleanCode, language: language }) // Send clean code
+        body: JSON.stringify({ code: cleanCode, language: language })
       });
       
       if (!response.ok) throw new Error("Failed to connect to analysis engine.");
@@ -232,13 +232,13 @@ const Analyzer = () => {
             </div>
           </Card>
 
-          {/* Results Section - Attached Ref here for scrolling */}
+          {/* Results Section */}
           {result && (
             <motion.div 
               ref={resultsRef} 
               initial={{ opacity: 0, y: 20 }} 
               animate={{ opacity: 1, y: 0 }} 
-              className="grid gap-6 md:grid-cols-3 scroll-mt-24" // scroll-mt ensures header doesn't cover it
+              className="grid gap-6 md:grid-cols-3 scroll-mt-24"
             >
               <Card className="md:col-span-3 border-blue-200 bg-blue-50/40 shadow-md">
                 <div className="p-6 flex flex-col md:flex-row items-center justify-between gap-6">
