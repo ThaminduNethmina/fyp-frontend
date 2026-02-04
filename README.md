@@ -1,16 +1,66 @@
-# React + Vite
+# AlgoX: Neuro-Symbolic Algorithm Complexity Analyzer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+![React](https://img.shields.io/badge/Frontend-React%20%2B%20Vite-61DAFB)
+![FastAPI](https://img.shields.io/badge/Backend-FastAPI%20%2B%20PyTorch-009688)
+![Status](https://img.shields.io/badge/Status-Research%20Prototype-orange)
 
-Currently, two official plugins are available:
+> **Final Year Research Project** > An Explainable AI-focused Approach for Time Complexity Classification of An Algorithm.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Live Demo
+- **Frontend:** [https://algox-web.netlify.app](https://algox-webt.netlify.app)
+- **Backend API:** [https://huggingface.co/spaces/himansha2001/algox-backend](https://huggingface.co/spaces/himansha2001/algox-backend/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📖 Project Overview
+AlgoX is a developer tool designed to bridge the gap between theoretical algorithm analysis and practical code optimization. Unlike standard profilers that require running code, AlgoX uses a **Neuro-Symbolic** approach to predict Time Complexity ($O(n)$, $O(n^2)$, etc.) statically.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+It combines **Deep Learning (CodeBERT)** to understand code semantics with **Static Analysis (AST)** to detect structural patterns like recursion and nested loops.
+
+### ✨ Key Features
+* **Hybrid Analysis Engine:** Aggregates probability scores from a Transformer model with deterministic AST rules.
+* **SHAP Explainability:** visualizes *why* a prediction was made by highlighting code tokens (Red = High Impact).
+* **Multi-Language Support:** Auto-detects and parses **Java** and **Python**.
+* **Professional Editor:** Integrated Monaco Editor (VS Code engine) with real-time syntax validation.
+
+---
+
+## 🏗️ System Architecture
+The system follows a decoupled Client-Server architecture hosted on Netlify (Frontend) and Hugging Face Spaces (Backend).
+
+![System Architecture](./screenshots/architecture.jpg)
+
+---
+
+## 🛠️ Tech Stack
+
+### **Frontend (Client)**
+* **Framework:** React 18 + Vite
+* **Styling:** Tailwind CSS + Shadcn UI
+* **Editor:** `@monaco-editor/react`
+* **Visualization:** Framer Motion (Animations)
+* **Hosting:** Netlify CDN
+
+### **Backend (Server)**
+* **API Framework:** FastAPI (Python 3.9)
+* **ML Core:** PyTorch + Transformers (Hugging Face)
+* **Model:** Microsoft CodeBERT (Fine-tuned)
+* **Explainability:** SHAP (SHapley Additive exPlanations)
+* **Static Analysis:** `javalang` (Java) & `ast` (Python)
+* **Containerization:** Docker
+* **Hosting:** Hugging Face Spaces (CPU Basic)
+
+---
+
+## 📸 Screenshots
+
+### 1. Landing Page
+![Landing Page](./screenshots/landing.png)
+
+### 2. Analysis Result (Quadratic Detection)
+![Analyzer Dashboard](./screenshots/analysis.png)
+
+---
