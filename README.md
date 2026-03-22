@@ -10,7 +10,7 @@
 ---
 
 ## 🚀 Live Demo
-- **Frontend:** [https://algox-web.netlify.app](https://algox-webt.netlify.app)
+- **Frontend:** [https://algox-web.netlify.app](https://algox-web.netlify.app)
 - **Backend API:** [https://huggingface.co/spaces/himansha2001/algox-backend](https://huggingface.co/spaces/himansha2001/algox-backend/)
 
 ---
