@@ -6,19 +6,22 @@ const ShapHighlighter = ({ tokens }) => {
     <div className="bg-slate-950 p-6 rounded-lg font-mono text-sm leading-relaxed overflow-x-auto text-slate-300 border border-slate-800 shadow-inner whitespace-pre-wrap">
       {tokens.map((item, index) => {
         const score = item.score;
-        let style = {};
-        
-        if (score > 0) {
-          const alpha = Math.min(score * 50, 0.9); 
-          style = { backgroundColor: `rgba(220, 38, 38, ${alpha})`, color: 'white' };
-        } else if (score < 0) {
-          const alpha = Math.min(Math.abs(score) * 50, 0.5);
-          style = { backgroundColor: `rgba(37, 99, 235, ${alpha})`, color: 'white' };
-        }
 
-        // Clean up CodeBERT special characters
-        // 'Ġ' is a space, 'Ċ' is a newline
         let tokenText = item.token.replace(/Ġ/g, ' ').replace(/Ċ/g, '\n');
+
+        const isWhitespaceOnly = tokenText.trim() === '';
+
+        let style = {};
+
+        if (!isWhitespaceOnly) {
+          if (score > 0) {
+            const alpha = Math.min(score * 50, 0.9); 
+            style = { backgroundColor: `rgba(220, 38, 38, ${alpha})`, color: 'white' };
+          } else if (score < 0) {
+            const alpha = Math.min(Math.abs(score) * 50, 0.5);
+            style = { backgroundColor: `rgba(37, 99, 235, ${alpha})`, color: 'white' };
+          }
+        }
 
         return (
           <motion.span
