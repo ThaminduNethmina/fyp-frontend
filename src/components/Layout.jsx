@@ -61,9 +61,9 @@ const Layout = ({ children }) => {
 
       {/* FOOTER */}
       <footer className="border-t border-slate-200 py-8 bg-white text-center mt-auto">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-center items-center gap-4 text-sm text-slate-500">
           <p>© 2026 AlgoX Research.</p>
-          <div className="flex gap-6">
+          <div className="gap-6 hidden">
             <span className="cursor-pointer hover:text-slate-900">Research Paper</span>
             <span className="cursor-pointer hover:text-slate-900">Documentation</span>
           </div>

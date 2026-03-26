@@ -28,7 +28,7 @@ const Landing = () => {
           </h1>
 
           <p className="max-w-2xl mx-auto text-lg text-slate-600 mb-10 leading-relaxed">
-            AlgoX overcomes the limitations of LLMs by combining <strong>CodeBERT</strong> embeddings with <strong>Static Analysis</strong> to accurately predict and explain Big-O complexity.
+            AlgoX overcomes the limitations of LLMs by combining <strong>Transformer-based model</strong> embeddings with <strong>Static Analysis</strong> to accurately predict and explain Big-O complexity.
           </p>
 
           <div className="flex flex-col md:flex-row justify-center gap-4">
@@ -38,7 +38,7 @@ const Landing = () => {
               </Button>
             </Link>
             <Link to="/">
-            <Button variant="outline" size="lg" className="h-12 px-8 rounded-full border-slate-300 text-slate-700 hover:bg-slate-50">
+            <Button variant="outline" size="lg" className="h-12 px-8 rounded-full border-slate-300 text-slate-700 hover:bg-slate-50 hidden">
               Read the Abstract
             </Button>
             </Link>        
@@ -78,7 +78,7 @@ const Landing = () => {
       <section className="py-24 text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">
-            Built for accuracy, designed for developers.
+              Ready to demystify your code's time complexity?
           </h2>
           <Link to="/analyze" className="text-blue-600 font-medium hover:underline inline-flex items-center gap-1">
             Test the model now <ArrowRight size={16} />
