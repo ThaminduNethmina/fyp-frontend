@@ -338,7 +338,7 @@ const Analyzer = () => {
                     : "bg-blue-600 hover:bg-blue-700 text-white"
                   }`}
               >
-                {loading ? <Loader2 className="mr-2 h-5 w-5 animate-spin" /> : <Zap className="mr-2 h-5 w-5" />}
+                {loading ? <Loader2 className="mr-2 h-5 w-5 animate-spin" /> : ""}
                 {loading ? "Analyzing..." : "Analyze Complexity"}
               </Button>
             </div>
