@@ -22,7 +22,7 @@ const isPlaceholderCode = (value) => {
   return Object.values(PLACEHOLDERS).includes(value.trim());
 };
 
-// UTILITY: STRIP COMMENTS
+// STRIP COMMENTS
 const stripComments = (code, lang) => {
   if (!code) return "";
 
@@ -84,7 +84,7 @@ const hasBalancedDelimiters = (code) => {
   return stack.length === 0 && !inSingleQuote && !inDoubleQuote;
 };
 
-// STRICT VALIDATOR
+// VALIDATOR
 const validateInput = (code, selectedLang) => {
   if (!code || !code.trim() || isPlaceholderCode(code)) {
     return "Please enter code before running analysis.";
@@ -227,7 +227,7 @@ const Analyzer = () => {
     setValidationError(currentValidationError);
     if (currentValidationError) return;
 
-    // 1. Strip comments before sending
+    // Strip comments
     const cleanCode = stripComments(code, language);
 
     setLoading(true);

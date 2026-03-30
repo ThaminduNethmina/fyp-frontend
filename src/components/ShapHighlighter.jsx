@@ -28,7 +28,7 @@ const ShapHighlighter = ({ tokens }) => {
             key={index}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: index * 0.001 }} // Faster animation for long code
+            transition={{ delay: index * 0.001 }}
             className="inline rounded px-0 py-0.5 transition-colors duration-200 cursor-help relative group"
             style={style}
           >

@@ -18,7 +18,7 @@
 ## 📖 Project Overview
 AlgoX is a developer tool designed to bridge the gap between theoretical algorithm analysis and practical code optimization. Unlike standard profilers that require running code, AlgoX uses a **Neuro-Symbolic** approach to predict Time Complexity ($O(n)$, $O(n^2)$, etc.) statically.
 
-It combines **Deep Learning (CodeBERT)** to understand code semantics with **Static Analysis (AST)** to detect structural patterns like recursion and nested loops.
+It combines **Deep Learning (UniXCoder)** to understand code semantics with **Static Analysis (AST)** to detect structural patterns like recursion and nested loops.
 
 ### ✨ Key Features
 * **Hybrid Analysis Engine:** Aggregates probability scores from a Transformer model with deterministic AST rules.
